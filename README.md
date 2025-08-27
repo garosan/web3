@@ -1,3 +1,1 @@
 # Web3 Studies
-
-Again...
