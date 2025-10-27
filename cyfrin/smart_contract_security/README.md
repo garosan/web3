@@ -1,19 +1,34 @@
-# Smart Contract Security
+# Smart Contract Audits, Security, and DeFi FULL Course | Learn smart contract auditing
 
-## Table of Contents
+- [Youtube Video](https://www.youtube.com/watch?v=pUWmJ86X_do)
 
-- [Course Introduction](./01_course_introduction.md)
-- [Review](./02_review.md)
-- [What is a smart contract audit](./03_what_is_a_smart_contract_audit.md)
-- [Your First Audit | PasswordStore](./04_passwordstore.md)
-- [Puppy raffle](./05_puppy_raffle.md)
-- [TSwap](./06_tswap.md)
-- [Thunder Loan](./07_thunder_loan.md)
-- [Boss Bridge](./08_boss_bridge.md)
-- [MEV & Governance](./09_mev_governance.md)
+## Common EIPs/ERCs
 
-<p>
-<a href="https://updraft.cyfrin.io/courses/security" target="_blank" rel="noopener noreferrer">
-  <img src="https://res.cloudinary.com/droqoz7lg/image/upload/f_auto/q_auto/v1748556702/assets/web3-security-1748341268.png" alt="Description" style="max-width: 450px; width: 100%;" />
-   </a>
-</p>
+- [ERC-20](#)
+- [ERC-677](#)
+- [ERC-721](#)
+- [ERC-777](#)
+- [ERC-1155](#)
+- [ERC-1967: Standard Proxy Storage Slots](#)
+
+## Links
+
+- [Introduction To ERC Token Standards — Part 1](https://medium.com/immunefi/how-erc-standards-work-part-1-c9795803f459)
+
+Major Drawbacks of ERC20 Standards:
+
+1. Impossibility of handling incoming token transactions.
+
+ERC20 has only functionality for moving and accounting for funds. There is no way to handle incoming token transactions and no way to reject any non-supported tokens.
+
+2. The transfer process is inefficient.
+
+transfer() is suitable and safe for transferring to EOAs only. If you want to transfer tokens to a contract, you need to ensure that the receiver contract can handle incoming transfers. An accidental token transfer to a contract that is not ERC-20 compatible will result in loss of tokens.
+
+To send the funds to a smart contract, Alice needs to use the approve and transferFrom combination.
+
+a. First, the user needs to set allowance for the receiverContract with an amount: approve(receiverContract,100)
+
+b. Then, the user has to make a call from receiverContract to move user funds from the ERC20 token contract to the receiver contract using transferFrom(Alice,receiverContract,100)
+
+c. This pattern is also gas-inefficient, since it requires two separate transactions to move the funds from the user to the receiver contract.s

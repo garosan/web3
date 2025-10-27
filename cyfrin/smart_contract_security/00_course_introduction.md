@@ -1,4 +1,4 @@
-# Section 01. Course Introduction
+# Course Introduction
 
 Taught by:
 
@@ -11,14 +11,14 @@ Taught by:
   - [Github](https://github.com/pashov)
 - [Juliette](https://x.com/_juliettech)
 - Johnny Time from Gingersec
-- [Andy Li](https://x.com/andyfeili)
+- Andy Li
   - [Youtube](https://www.youtube.com/@andyli)
 - [Josselin Feist](https://x.com/Montyly) from Trail of Bits
 - [Alex Roan](https://x.com/alexroan) CTO Cyfrin
 - Owen from Guardian Audits
   - [X](https://x.com/0xOwenThurm)
   - [Youtube](https://www.youtube.com/@0xOwenThurm)
-- [Hans Friese](https://x.com/hansfriese)
+- Hans Friese, one of the top competitive auditors
 
 Topics covered:
 
